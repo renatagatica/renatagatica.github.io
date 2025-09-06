@@ -262,3 +262,23 @@ p{ margin:6px 0 12px; }
   .insta-header{ grid-template-columns: 52px 1fr; }
   .insta-follow{ grid-column: 2; justify-self:end; margin-top: 4px; }
 }
+
+/* --- Fix Educación en móviles: evitar overflow y apilar título/meta --- */
+@media (max-width: 600px){
+  /* Línea temporal un poco más compacta */
+  .timeline.pretty{ padding-left: 30px; }
+  .timeline.pretty::before{ left: 12px; }
+
+  /* Título arriba y meta debajo (permitir salto y corte de palabras) */
+  .timeline-head{
+    grid-template-columns: 1fr;   /* apilar */
+    row-gap: 4px;
+  }
+  .edu-meta-right{
+    justify-self: start;
+    white-space: normal;          /* antes: nowrap */
+    overflow-wrap: anywhere;      /* permitir cortes */
+    word-break: break-word;
+  }
+}
+
