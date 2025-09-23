@@ -31,13 +31,13 @@
         cmTime: "2024 – Actualidad",
         cmIntro: "Manejo de redes, diseño gráfico, marketing digital y atención al cliente.",
         sandraSub: "— Neuróloga Infantil",
-        sandraDesc: "Producción integral (edición foto/video) y community care con derivación al consultorio.",
+        sandraDesc: "Producción integral (edición foto/video) y community care con derivación omnicanal a consultorio y/o hospital.",
         tdpSub: "— Clases de padel",
-        tdpDesc: "Gestión de contenido sobre viajes, torneos, indumentaria y clases; cobertura de eventos y atención de consultas.",
+        tdpDesc: "Gestión del contenido de viajes, torneos, coaching y clases; cobertura de eventos y atención de consultas.",
         depaSub: "— Emprendimiento de moda sostenible",
-        depaDesc: "Identidad de marca, dirección/edición fotográfica y planificación de grilla; gestión de DM/consultas.",
+        depaDesc: "Construcción de identidad de marca, dirección y edición fotográfica y gestión de DM/consultas.",
         bandastSub: "— Indumentaria de padel",
-        bandastDesc: "Plan de lanzamientos, estética y tono de marca; activación de contenidos para reconocimiento y primeras ventas.",
+        bandastDesc: "Definición de estética y tono de marca, y activación de contenidos para impulsar reconocimiento y primeras ventas.",
         view: "Ver",
         store: "Tienda Online",
       },
@@ -46,7 +46,7 @@
         tech: "Técnicas",
         soft: "Blandas",
         langs: "Idiomas",
-        softList: ["Disciplina","Trabajo","Resolución","Comunicación","Adaptabilidad","Creatividad","Flexibilidad","Gestión"],
+        softList: ["Disciplina","Pensamiento crítico","Resolución","Comunicación","Adaptabilidad","Creatividad","Flexibilidad","Atención al detalle"],
         esLabel: "Español (Nativo)",
         enLabel: "Inglés C1 (Advanced)",
         cambridge: "Certificado Cambridge"
@@ -83,7 +83,7 @@
         sandraSub: "— Pediatric Neurologist",
         sandraDesc: "End-to-end photo/video editing, content calendar and message triage to clinic.",
         tdpSub: "— Padel classes",
-        tdpDesc: "Content on trips, tournaments, apparel and classes; event coverage and inquiry handling.",
+        tdpDesc: "Content on trips, tournaments, coaching and classes; event coverage and inquiry handling.",
         depaSub: "— Sustainable fashion venture",
         depaDesc: "Brand identity, photo direction/editing and editorial planning; DM/helpdesk.",
         bandastSub: "— Padel apparel",
@@ -96,7 +96,7 @@
         tech: "Technical",
         soft: "Soft Skills",
         langs: "Languages",
-        softList: ["Discipline","Teamwork","Problem-solving","Communication","Adaptability","Creativity","Flexibility","Management"],
+        softList: ["Discipline","Critical thinking","Problem-solving","Communication","Adaptability","Creativity","Flexibility","Attention to detail"],
         esLabel: "Spanish (Native)",
         enLabel: "English C1 (Advanced)",
         cambridge: "Cambridge Certificate"
@@ -199,9 +199,7 @@
     const langMeters = Array.from(document.querySelectorAll('#habilidades .langs .meters .meter-item .meter-label'));
     if (langMeters[0]) langMeters[0].childNodes[0].nodeValue = L.skills.esLabel;
     if (langMeters[1]) {
-      // label text (first text node) + Cambridge button text
       const lbl = langMeters[1];
-      // ensure first text node is replaced
       const textNode = Array.from(lbl.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
       if (textNode) textNode.nodeValue = L.skills.enLabel + " ";
       setText('#cambridge-link', L.skills.cambridge);
@@ -258,4 +256,3 @@
       : 'en';
   applyLang(initial);
 })();
-// :contentReference[oaicite:3]{index=3}
